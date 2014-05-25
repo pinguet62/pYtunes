@@ -55,13 +55,13 @@ def main():
         if track.composer not in [None, ""]: print("Composer not empty: " + stdoutLocation)
     	
     	# Rating
-#     	iTunesRating = track.rating2
-#         try:
-#             id3Rating = [int(line[-6:-4]) for line in mutagen.id3.ID3(location).pprint().split("\n") if line[:4] == "POPM"]
-#             id3Rating = id3Rating[0] if len(id3Rating) > 0 else 0
-#             id3Rating = {0:0, 1:1, 64:2, 28:3, 96:4, 55:5}[id3Rating]
-#             if iTunesRating != id3Rating: print("Rating not match: " + stdoutLocation)
-#         except: pass
+    	iTunesRating = track.rating2
+        try:
+            id3Rating = [int(line[-6:-4]) for line in mutagen.id3.ID3(location).pprint().split("\n") if line[:4] == "POPM"]
+            id3Rating = id3Rating[0] if len(id3Rating) > 0 else 0
+            id3Rating = {0:0, 1:1, 64:2, 28:3, 96:4, 55:5}[id3Rating]
+            if iTunesRating != id3Rating: print("Rating not match: " + stdoutLocation)
+        except: pass
 
 
 if __name__ == '__main__':
