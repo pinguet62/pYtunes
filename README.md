@@ -108,6 +108,6 @@ print(track.location2)
 
 ## Python version
 
-The [pYtunes.py](pYtunes) module is compatible with the version **3.3**.
+The [pYtunes.py](pYtunes.py) module is compatible with the version **3.3**.
 
-But the [compare.py](compare) script require version **2.7**.
+But the [compare.py](compare.py) script require version **2.7**.
